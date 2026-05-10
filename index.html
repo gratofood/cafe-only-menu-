@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grato - Lux Online Menyu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="particles-container" id="particles"></div>
+
+    <div class="container">
+        <header>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="uz">UZ</button>
+                <button class="lang-btn" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+            <div class="logo">
+                <img src="logo.png" alt="Grato Logo" class="logo-img">
+                <h1 id="ui-logo">GRATO</h1>
+                <p id="ui-subtitle">Eksklyuziv Ta'mlar Olami</p>
+            </div>
+        </header>
+
+        <section class="controls">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Taom qidirish...">
+            </div>
+            <div class="categories" id="category-filters">
+                <button class="cat-btn active" data-category="all">Hammasi</button>
+                <button class="cat-btn" data-category="food">Ovqatlar</button>
+                <button class="cat-btn" data-category="salad">Salatlar</button>
+            </div>
+        </section>
+
+        <main id="menu-container" class="menu-grid">
+            <!-- Items injected by JS -->
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="item-modal">
+        <div class="modal-content">
+            <div class="modal-img-wrapper">
+                <button class="modal-close" id="close-modal">&times;</button>
+                <img src="" alt="" class="modal-img" id="modal-img">
+            </div>
+            <div class="modal-body">
+                <h2 class="modal-title" id="modal-title"></h2>
+                <div class="modal-info">
+                    <span class="price" id="modal-price"></span>
+                    <span class="weight" id="modal-weight"></span>
+                </div>
+                <div class="modal-desc">
+                    <strong id="ui-ingredients-label">Tarkibi:</strong>
+                    <p id="modal-ingredients"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
